@@ -1,8 +1,3 @@
-CREATE TABLE test(
-	cod_test SERIAL NOT NULL,
-	CONSTRAINT pk_cod_test PRIMARY KEY (cod_test)
-);
-
 CREATE TABLE super_market
 (
 	cod_super_market SERIAL NOT NULL,
