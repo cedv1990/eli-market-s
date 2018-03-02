@@ -3,6 +3,15 @@ CREATE TABLE test(
 	CONSTRAINT pk_cod_test PRIMARY KEY (cod_test)
 );
 
+CREATE TABLE super_market
+(
+	cod_super_market SERIAL NOT NULL,
+	nombre_super_market VARCHAR(40) NOT NULL,
+	direccion_super_market VARCHAR(100) NULL,
+	gps_super_market VARCHAR(200) NULL, /*JSON geolocation*/
+	CONSTRAINT pk_cod_super_market PRIMARY KEY (cod_super_market)
+);
+
 /*CREATE TABLE rol
 (
 	cod_rol SERIAL NOT NULL,

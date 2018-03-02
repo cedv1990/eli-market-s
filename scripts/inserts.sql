@@ -1,4 +1,12 @@
-INSERT INTO rol (nombre_rol)
+INSERT INTO super_market (nombre_super_market, direccion_super_market)
+VALUES 
+	('ALKOSTO - Calle 170', 'Cra. 69 #170-15'),
+	('ÉXITO - Calle 134', 'Cl. 134 #9-51'),
+	('CARULLA - Cedritos', 'Cra. 17 #151-44'),
+	('OXXO - Calle 147', 'Cl. 147 #12-6'),
+	('ARA - Calle 140', 'Cl. 140 #7c-2');
+
+/*INSERT INTO rol (nombre_rol)
 VALUES ('Encargado'), ('Asistente');
 
 INSERT INTO integrante (nombre_integrante, apellido_integrante, cedula_integrante, usuario_integrante, clave_integrante)
@@ -30,7 +38,7 @@ VALUES (1, 1, 1), (2, 2, 1), (3, 3, 1), (4, 4, 1), (5, 3, 1), (5, 5, 1),
 
 INSERT INTO menu_comite (nombre_menu, contenido_menu, url_menu, cod_comite, cod_integrante_reg)
 VALUES
-        /*¿Quiénes somos?*/
+        /*¿Quiénes somos?*
 	('¿Quiénes somos?', NULL, 'quienes.html', 1, 1),
 	('¿Quiénes somos?', 'Contenido de base de datos', NULL, 2, 2),
 	('¿Quiénes somos?', NULL, 'quienes.html', 3, 3),
@@ -40,18 +48,18 @@ VALUES
 	('¿Quiénes somos?', NULL, 'quienes.html', 7, 7),
 	('¿Quiénes somos?', 'Contenido de base de datos', NULL, 8, 8),
 	('¿Quiénes somos?', NULL, 'quienes.html', 9, 8),
-        /*OTROS: Internacionalización*/
+        /*OTROS: Internacionalización*
 	('Alianzas con países', NULL, 'alianzaPaises.html', 9, 8),
 	('Alianzas con instituciones', 'Contenido de base de datos', NULL, 9, 8),
-        /*OTROS: Éxito estudiantil*/
+        /*OTROS: Éxito estudiantil*
 	('Orientación vocacional y profesional', NULL, 'orientacion.html', 8, 8),
 	('Talleres para el aprendizaje', 'Contenido de base de datos', NULL, 8, 8),
 	('Grupos de apoyo', NULL, 'apoyo.html', 8, 8),
 	('PAE', 'Contenido de base de datos', NULL, 8, 8),
-        /*OTROS: Investigaciones*/
+        /*OTROS: Investigaciones*
 	('Grupos de investigación', NULL, 'grupos.html', 6, 6),
 	('Proyectos financiables', 'Contenido de base de datos', 'grupos.html', 6, 6),
-        /*Contáctenos*/
+        /*Contáctenos*
 	('Contáctenos', NULL, '/contacto', 1, 1),
 	('Contáctenos', NULL, '/contacto', 2, 2),
 	('Contáctenos', NULL, '/contacto', 3, 3),
@@ -61,3 +69,4 @@ VALUES
 	('Contáctenos', NULL, '/contacto', 7, 7),
 	('Contáctenos', NULL, '/contacto', 8, 8),
 	('Contáctenos', NULL, '/contacto', 9, 8);
+*/
