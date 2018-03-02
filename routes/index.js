@@ -2,11 +2,16 @@ var express = require('express');
 var router = express.Router();
 
 var test = require('../services/test');
+var super_market = require('../services/super_market');
+
 var committees = require('../services/committees');
 var migrations = require('../services/migrations');
 var menu = require('../services/menu');
 
 router.get('/test', test.ping);
+router.get('/super', super_market.getAll);
+
+
 router.get('/migrations/drop', migrations.drop);
 router.get('/migrations/create', migrations.create);
 router.get('/migrations/insert', migrations.insert);
