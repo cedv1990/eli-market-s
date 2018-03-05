@@ -1,10 +1,24 @@
 CREATE TABLE super_market
 (
 	cod_super_market SERIAL NOT NULL,
-	nombre_super_market VARCHAR(40) NOT NULL,
-	direccion_super_market VARCHAR(100) NULL,
+	name_super_market VARCHAR(40) NOT NULL,
+	direction_super_market VARCHAR(100) NULL,
 	gps_super_market VARCHAR(200) NULL, /*JSON geolocation*/
 	CONSTRAINT pk_cod_super_market PRIMARY KEY (cod_super_market)
+);
+
+CREATE TABLE user
+(
+	cod_user SERIAL NOT NULL,
+	name_user VARCHAR(40) NOT NULL,
+	last_name_user VARCHAR(40) NOT NULL,
+	alias_user VARCHAR(20) NOT NULL,
+	pass_user TEXT NOT NULL,
+	email_user VARCHAR(40) NOT NULL,
+	verification_user VARCHAR(36) NULL,
+	CONSTRAINT pk_cod_user PRIMARY KEY (cod_user),
+	CONSTRAINT uk_alias_user UNIQUE (alias_user),
+	CONSTRAINT uk_email_user UNIQUE (email_user)
 );
 
 /*CREATE TABLE rol

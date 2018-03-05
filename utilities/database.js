@@ -1,8 +1,7 @@
 //var promise = require('bluebird');
 var fs = require('fs')
 var string = require('util');
-
-
+var uuid = require('node-uuid');
 
 var connectionString = 'postgres://';
 
@@ -28,5 +27,6 @@ module.exports = {
 	database: function(){
 		return pgp(connectionString);
 	},
-	pgp: pgp
+	pgp: pgp,
+	newGuid: uuid.v4
 }

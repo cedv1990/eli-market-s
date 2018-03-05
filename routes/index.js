@@ -1,3 +1,5 @@
+/// <reference path="../services/super_market.js" />
+
 var express = require('express');
 var router = express.Router();
 
@@ -13,5 +15,6 @@ router.get('/migrations/create', migrations.create);
 router.get('/migrations/insert', migrations.insert);
 
 router.get('/super', super_market.getAll);
+router.get('/super/:cod', super_market.getSingle);
 
 module.exports = router;
