@@ -1,4 +1,4 @@
-INSERT INTO super_market (nombre_super_market, direccion_super_market)
+INSERT INTO super_market (name_super_market, direction_super_market)
 VALUES 
 	('ALKOSTO - Calle 170', 'Cra. 69 #170-15'),
 	('ÉXITO - Calle 134', 'Cl. 134 #9-51'),
