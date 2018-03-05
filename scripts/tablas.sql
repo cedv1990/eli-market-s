@@ -7,18 +7,18 @@ CREATE TABLE super_market
 	CONSTRAINT pk_cod_super_market PRIMARY KEY (cod_super_market)
 );
 
-CREATE TABLE user
+CREATE TABLE user_market
 (
-	cod_user SERIAL NOT NULL,
-	name_user VARCHAR(40) NOT NULL,
-	last_name_user VARCHAR(40) NOT NULL,
-	alias_user VARCHAR(20) NOT NULL,
-	pass_user TEXT NOT NULL,
-	email_user VARCHAR(40) NOT NULL,
+	cod_user_market SERIAL NOT NULL,
+	name_user_market VARCHAR(40) NOT NULL,
+	last_name_user_market VARCHAR(40) NOT NULL,
+	alias_user_market VARCHAR(20) NOT NULL,
+	pass_user_market TEXT NOT NULL,
+	email_user_market VARCHAR(40) NOT NULL,
 	verification_user VARCHAR(36) NULL,
-	CONSTRAINT pk_cod_user PRIMARY KEY (cod_user),
-	CONSTRAINT uk_alias_user UNIQUE (alias_user),
-	CONSTRAINT uk_email_user UNIQUE (email_user)
+	CONSTRAINT pk_cod_user_market PRIMARY KEY (cod_user_market),
+	CONSTRAINT uk_alias_user_market UNIQUE (alias_user_market),
+	CONSTRAINT uk_email_user_market UNIQUE (email_user_market)
 );
 
 /*CREATE TABLE rol
