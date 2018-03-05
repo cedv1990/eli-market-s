@@ -17,5 +17,6 @@ router.get('/migrations/insert', migrations.insert);
 router.get('/super', super_market.getAll);
 router.get('/super/:cod', super_market.getSingle);
 router.post('/super', super_market.create);
+router.put('/super', super_market.update);
 
 module.exports = router;

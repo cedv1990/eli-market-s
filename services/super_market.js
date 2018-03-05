@@ -46,8 +46,24 @@ var create = function(req, res, next) {
     });
 }
 
+var update = function (req, res, next) {
+  var market = JSON.parse( req.body.market );
+  db.database().none('UPDATE super_market SET name_super_market = $1, direction_super_market = $2, gps_super_market = $3 WHERE cod_super_market = $4', [market.name, market.direction, JSON.stringify( market.gps ), market.cod])
+    .then(function (){
+      res.status(200)
+        .json({
+          status: 'success',
+          message: 'Supermercado actualizado con éxito'
+        });
+    })
+    .catch(function (err) {
+      return next(err);
+    });
+}
+
 module.exports = {
   getAll: getAll,
   getSingle: getSingle,
-  create: create
+  create: create,
+  update: update
 };
