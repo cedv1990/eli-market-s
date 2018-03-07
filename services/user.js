@@ -18,10 +18,13 @@ var validate = function(req, res, next){
                 email: data.email_user_market
             },
             message: 'Retorna si usuario existe'
-        });
+          });
       }
       else{
-          res.status(401);
+        res.status(401)
+          .json({
+            status: 'unathorized'
+          });
       }
     })
     .catch(function (err) {
