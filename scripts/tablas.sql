@@ -16,6 +16,7 @@ CREATE TABLE user_market
 	pass_user_market TEXT NOT NULL,
 	email_user_market VARCHAR(40) NOT NULL,
 	verification_user VARCHAR(36) NULL,
+	state_user BOOLEAN NOT NULL DEFAULT FALSE,
 	CONSTRAINT pk_cod_user_market PRIMARY KEY (cod_user_market),
 	CONSTRAINT uk_alias_user_market UNIQUE (alias_user_market),
 	CONSTRAINT uk_email_user_market UNIQUE (email_user_market)

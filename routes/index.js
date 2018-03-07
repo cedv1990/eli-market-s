@@ -5,6 +5,7 @@ var router = express.Router();
 
 var test = require('../services/test');
 var super_market = require('../services/super_market');
+var user = require('../services/user');
 
 var migrations = require('../services/migrations');
 
@@ -18,5 +19,7 @@ router.get('/super', super_market.getAll);
 router.get('/super/:cod', super_market.getSingle);
 router.post('/super', super_market.create);
 router.put('/super', super_market.update);
+
+router.post('/user', user.validate);
 
 module.exports = router;

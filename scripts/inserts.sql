@@ -6,6 +6,9 @@ VALUES
 	('OXXO - Calle 147', 'Cl. 147 #12-6'),
 	('ARA - Calle 140', 'Cl. 140 #7c-2');
 
+INSERT INTO user_market (name_user_market, last_name_user_market, alias_user_market, pass_user_market, email_user_market, state_user)
+VALUES ('Carlos Eduardo', 'Díaz Valbuena', 'carlos.diaz', 'xI6myjnZ6/7/WlReLTPP/A==', 1);
+
 /*INSERT INTO rol (nombre_rol)
 VALUES ('Encargado'), ('Asistente');
 
