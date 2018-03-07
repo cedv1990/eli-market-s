@@ -32,8 +32,7 @@ var getSingle = function(req, res, next){
 }
 
 var create = function(req, res, next) {
-  var market = JSON.parse( req.body.market );
-  db.database().none('INSERT INTO super_market (name_super_market, direction_super_market, gps_super_market) VALUES ($1, $2, $3)', [market.name, market.direction, JSON.stringify( market.gps )])
+  db.database().none('INSERT INTO super_market (name_super_market, direction_super_market, gps_super_market) VALUES ($1, $2, $3)', [req.body.market.name, req.body.market.direction, JSON.stringify( req.body.market.gps )])
     .then(function (){
       res.status(200)
         .json({
@@ -47,8 +46,7 @@ var create = function(req, res, next) {
 }
 
 var update = function (req, res, next) {
-  var market = JSON.parse( req.body.market );
-  db.database().none('UPDATE super_market SET name_super_market = $1, direction_super_market = $2, gps_super_market = $3 WHERE cod_super_market = $4', [market.name, market.direction, JSON.stringify( market.gps ), market.cod])
+  db.database().none('UPDATE super_market SET name_super_market = $1, direction_super_market = $2, gps_super_market = $3 WHERE cod_super_market = $4', [req.body.market.name, req.body.market.direction, JSON.stringify( req.body.market.gps ), req.body.market.cod])
     .then(function (){
       res.status(200)
         .json({
