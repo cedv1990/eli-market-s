@@ -6,10 +6,17 @@ var validate = function(req, res, next){
 
   db.database().any('select cod_user_market, name_user_market, last_name_user_market, alias_user_market, email_user_market from user_market where (alias_user_market = $1 or email_user_market = $1) and pass_user_market = $2 and state_user = true', [user.usuario, s5.toAESEncrypt(s5.fromAESEncrypt(user.pass), true)])
     .then(function (data) {
+      data = data.shift();
       res.status(200)
         .json({
           status: 'success',
-          data: data.shift(),
+          data: {
+              cod: data.cod_user_market,
+              name: data.name_user_market,
+              last_name: data.last_name_user_market,
+              alias: data.alias_user_market,
+              email: data.email_user_market
+          },
           message: 'Retorna si usuario existe'
         });
     })
