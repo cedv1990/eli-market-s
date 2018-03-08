@@ -21,5 +21,6 @@ router.post('/super', super_market.create);
 router.put('/super', super_market.update);
 
 router.post('/user', user.validate);
+router.patch('/user', user.update);
 
 module.exports = router;
