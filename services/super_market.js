@@ -5,7 +5,7 @@ const transform = (d) => {
     cod: d.cod_super_market,
     name: d.name_super_market,
     direction: d.direction_super_market,
-    gps: d.gps_super_market
+    gps: JSON.parse( d.gps_super_market )
   };
 }
 
