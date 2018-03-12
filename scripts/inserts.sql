@@ -1,10 +1,10 @@
-INSERT INTO super_market (name_super_market, direction_super_market)
+INSERT INTO super_market (name_super_market, direction_super_market, gps_super_market)
 VALUES 
-	('ALKOSTO - Calle 170', 'Cra. 69 #170-15'),
-	('ÉXITO - Calle 134', 'Cl. 134 #9-51'),
-	('CARULLA - Cedritos', 'Cra. 17 #151-44'),
-	('OXXO - Calle 147', 'Cl. 147 #12-6'),
-	('ARA - Calle 140', 'Cl. 140 #7c-2');
+	('ALKOSTO - Calle 170', 'Cra. 69 #170-15', '{"latitude":4.75997,"longitude":-74.0635872}'),
+	('ÉXITO - Calle 134', 'Cl. 134 #9-51', '{"latitude":4.7118481,"longitude":-74.0332924}'),
+	('CARULLA - Cedritos', 'Cra. 17 #151-44', '{"latitude":4.7321929,"longitude":-74.0435378}'),
+	('OXXO - Calle 147', 'Cl. 147 #12-6', '{"latitude":4.7271987,"longitude":-74.0353141}'),
+	('ARA - Calle 140', 'Cl. 140 #7c-2', '{"latitude":4.7173381,"longitude":-74.031568}');
 
 INSERT INTO user_market (name_user_market, last_name_user_market, alias_user_market, pass_user_market, email_user_market, state_user)
 VALUES ('Carlos Eduardo', 'Díaz Valbuena', 'carlos.diaz', '3WofrbFRIUdMJL/e3f4ZzA==', 'cedv90@gmail.com', true);
