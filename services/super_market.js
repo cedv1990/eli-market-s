@@ -1,12 +1,21 @@
 var db = require('../utilities/database');
 
+const transform = (d) => {
+  return {
+    cod: d.cod_super_market,
+    name: d.name_super_market,
+    direction: direction_super_market,
+    gps: gps_super_market
+  };
+}
+
 var getAll = function(req, res, next){
 	db.database().any('select cod_super_market, name_super_market, direction_super_market, gps_super_market from super_market order by cod_super_market')
     .then(function (data) {
       res.status(200)
         .json({
           status: 'success',
-          data: data,
+          data: data.map(transform),
           message: 'Retorna todos los supermercados registrados'
         });
     })
@@ -22,7 +31,7 @@ var getSingle = function(req, res, next){
       res.status(200)
         .json({
           status: 'success',
-          data: data,
+          data: transform(data),
           message: 'Retorna los datos de un supermercado'
         });
     })
